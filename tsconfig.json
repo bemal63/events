@@ -13,14 +13,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "app/*": ["srs/app/*"],
-      "assets/*": ["srs/assets/*"],
-      "entities/*": ["srs/entities/*"],
-      "features/*": ["srs/features/*"],
-      "pages/*": ["srs/pages/*"],
-      "widgets": ["srs/widgets/*"]
+      "app/*": ["app/*"],
+      "entities/*": ["entities/*"],
+      "features/*": ["features/*"],
+      "pages/*": ["pages/*"],
+      "shared/*":["shared/*"],
+      "widgets/*": ["widgets/*"]
     },
 
     /* Linting */
