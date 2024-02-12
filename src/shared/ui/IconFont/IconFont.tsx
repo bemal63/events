@@ -2,7 +2,7 @@ import classNames from "classnames";
 import iconStyles from "./IconFont.module.scss";
 import styles from "shared/assets/style.module.scss";
 export type IconName = keyof typeof styles;
-export type IconColor = "warn";
+export type IconColor = "warn" | "default";
 
 export interface IconProps {
   className?: string;
