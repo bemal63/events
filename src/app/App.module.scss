@@ -1,14 +1,15 @@
 .app {
   display: grid;
-  margin-top: 24px;
+  margin: 24px 0;
   font-family: 'Nunito', sans-serif;
 }
 
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .icon {
-  font-size: 32px;
+  font-size: 28px;
 }

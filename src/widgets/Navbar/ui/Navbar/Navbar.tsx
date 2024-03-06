@@ -11,5 +11,9 @@ interface NavbarProps {
 }
 
 export const Navbar = memo(({ children }: NavbarProps) => {
-  return <nav className={style.navbar}>{children}</nav>;
+  return (
+    <div className={style.navbar}>
+      <nav>{children}</nav>
+    </div>
+  );
 });
