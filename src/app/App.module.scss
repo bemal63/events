@@ -1,9 +1,12 @@
 .app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   margin-top: 24px;
   font-family: 'Nunito', sans-serif;
-  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon {
