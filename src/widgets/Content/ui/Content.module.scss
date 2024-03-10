@@ -1,3 +1,7 @@
 .main {
-  background-color: bisque;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+  gap: 32px;
+  grid-auto-rows: 225px;
+  // border-radius: 12px;
 }

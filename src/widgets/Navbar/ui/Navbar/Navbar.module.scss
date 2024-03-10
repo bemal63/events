@@ -1,6 +1,12 @@
 .navbar {
-  // display: grid;
-  // justify-content: space-between;
-  // align-items: center;
-  // text-align: center;
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
+
+.icon {
+  font-size: 28px;
+}
+

@@ -1,0 +1,25 @@
+.card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+
+  &:hover {
+    transform: box-shadow;
+  }
+}
+img {
+  border-radius: 16px;
+  width: 100%; // Заполняем ширину карточки
+  height: 65%; // Заполняем высоту карточки
+  object-fit: cover; // Обрезаем изображение, чтобы оно заполнило всю область
+  position: absolute; // Позиционируем изображение относительно карточки
+  top: 0; // Размещаем изображение в верхнем левом углу
+  left: 0;
+  box-shadow: 0px 5px 20px 5px rgba(212, 212, 212, 0.3);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
