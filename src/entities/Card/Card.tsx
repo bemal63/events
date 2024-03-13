@@ -8,17 +8,17 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ user }) => {
-  const { id, title, description, image } = user;
+  const { title, description, image } = user;
 
   return (
     <Panel className={styles.card}>
-      <img src={image} />
       <div className={styles.textContent}>
-        <Title id={id} tag="h3">
+        <Title tag="h3">
           {title}
         </Title>
         <Title tag="span">{description}</Title>
       </div>
+      <img className={styles.img} src={image} />
     </Panel>
   );
 };

@@ -3,23 +3,28 @@
   transition: all 0.2s ease-in-out;
   position: relative;
 
+  .textContent {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  text-shadow: #ffffff 1px 0 15px;
+}
+
   &:hover {
     transform: box-shadow;
   }
 }
-img {
+.img {
   border-radius: 16px;
-  width: 100%; // Заполняем ширину карточки
-  height: 65%; // Заполняем высоту карточки
-  object-fit: cover; // Обрезаем изображение, чтобы оно заполнило всю область
-  position: absolute; // Позиционируем изображение относительно карточки
-  top: 0; // Размещаем изображение в верхнем левом углу
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0; 
   left: 0;
-  box-shadow: 0px 5px 20px 5px rgba(212, 212, 212, 0.3);
+  box-shadow: 0px 5px 20px 5px rgba(133, 120, 120, 0.3);
 }
 
-.textContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
+
