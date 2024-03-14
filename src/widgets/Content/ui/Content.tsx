@@ -6,5 +6,5 @@ interface ContentProps {
 }
 
 export const Content = ({ children }: ContentProps) => {
-  return <main className={styles.main}>{children}</main>;
+  return <div className={styles.main}>{children}</div>;
 };

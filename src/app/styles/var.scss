@@ -5,19 +5,23 @@
   // Colors
 
 
-  // Gradients
+  // Shadow
+  --shadow: 0px 5px 20px 5px rgba(133, 120, 120, 0.3);
+  --shadow-hover: 0px 5px 25px 15px rgba(58, 52, 52, 0.25);
+  --text-shadow: #ffffff 1px 0 15px;;
 
 
   // Text Colors
-
+  --light: #fff;
+  --dark: #242424;
 
   // Font Size 
-  --fs-xxl: 38px;
+  --fs-xxl: 42px;
   --fs-xl: 32px;
   --fs-lg: 24px;
   --fs-md: 18px;
-  --fs-sm: 14px;
   --fs-main: 16px;
+  --fs-sm: 14px;
   --fs-xs: 8px;
   --fs-xxs: 4px;
 
@@ -27,7 +31,7 @@
   --gap-md: 12px;
   --gap-main: 16px;
   --gap-lg: 18px;
-  --gap-xl: 22px;
+  --gap-xl: 24px;
   --gap-xxl: 34px;
   --gap-xxxl: 40px;
 

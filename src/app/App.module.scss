@@ -1,6 +1,6 @@
 .app {
   display: grid;
-  margin: 24px 0;
+  margin: var(--gap-xl) 0;
   font-family: "Nunito", sans-serif;
 }
 
@@ -11,5 +11,5 @@
 }
 
 .icon {
-  font-size: 28px;
+  font-size: 24px;
 }

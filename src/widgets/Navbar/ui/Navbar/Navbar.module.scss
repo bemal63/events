@@ -1,5 +1,5 @@
 .navbar {
-  margin: 32px 0;
+  margin: var(--gap-xxl) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +7,6 @@
 }
 
 .icon {
-  font-size: 28px;
+  font-size: var(--fs-lg);
 }
 
