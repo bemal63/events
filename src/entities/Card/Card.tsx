@@ -12,7 +12,7 @@ export const Card: React.FC<CardProps> = ({ user }) => {
   const { title, description, image } = user;
 
   return (
-    <Link to={`/post/${user.id}`}>
+    <Link to={`/posts/${user.id}`}>
       <Panel className={styles.card}>
         <div className={styles.textContent}>
           <Title tag="h3">{title}</Title>

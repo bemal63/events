@@ -8,7 +8,7 @@ export const MainPage = () => {
     <main>
       <Content>
         {user.map((userData) => (
-          <Card key={userData.id} user={user.id} />
+          <Card key={userData.id} user={userData} />
         ))}
       </Content>
     </main>
