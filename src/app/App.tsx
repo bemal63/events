@@ -1,16 +1,22 @@
 import { Navbar } from "widgets/Navbar/ui/Navbar/Navbar";
 import { MainPage } from "pages/MainPage/MainPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import { PostPage } from "pages/PostPage/PostPage";
 import { user } from "helpers/posts/user";
+
+function ProfilePage() {
+  const {userId} = useParams();
+}
 
 export const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/post/:id" element={<PostPage user={user[7]} />} />
+        <Route>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/posts/:id" element={<PostPage user={user}/>} />
+        </Route>
       </Routes>
     </>
   );

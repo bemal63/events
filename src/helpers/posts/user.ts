@@ -1,4 +1,5 @@
 export type User = {
+  // map(arg0: (userData: any) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode;
   id: number;
   image: string;
   title: string;
