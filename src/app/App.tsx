@@ -10,7 +10,7 @@ export const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/post/:id" element={<PostPage user={user[1]}/>}/>
+        <Route path="/post/:id" element={<PostPage user={user[7]} />} />
       </Routes>
     </>
   );

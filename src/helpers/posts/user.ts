@@ -6,7 +6,7 @@ export type User = {
   posts: string;
 }
 
-export const user: User[] =
+export const user =
 [
   {
     "id": 1,
