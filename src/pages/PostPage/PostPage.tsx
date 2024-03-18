@@ -1,4 +1,4 @@
-import { User, user } from "helpers/posts/user";
+import { user } from "helpers/posts/user";
 import React from "react";
 import { Title } from "shared/ui/Title";
 import styles from "./PostPage.module.scss";
