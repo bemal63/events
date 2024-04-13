@@ -1,8 +1,8 @@
-import { ReactNode, memo } from "react";
+import {memo, ReactNode} from "react";
 import style from "./Navbar.module.scss";
-import { IconFont } from "shared/ui/IconFont/IconFont";
-import { Title } from "shared/ui/Title";
-import { Link } from "react-router-dom";
+import {IconFont} from "shared/ui/IconFont/IconFont";
+import {Title} from "shared/ui/Title";
+import {Link} from "react-router-dom";
 
 interface NavItem {
   item?: NavItem[];
@@ -21,7 +21,9 @@ export const Navbar = memo(({ children }: NavbarProps) => {
           Event
         </Title>
       </Link>
-      <IconFont className={style.icon} iconName="add" color="dark" />
+      <Link to="/create">
+        <IconFont className={style.icon} iconName="add" color="dark" />
+      </Link>
     </nav>
   );
 });
