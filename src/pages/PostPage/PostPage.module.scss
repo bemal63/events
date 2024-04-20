@@ -1,0 +1,21 @@
+.content {
+  display: grid;
+  place-items: center;
+  gap: var(--gap-xl);
+  height: 100%;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-lg);
+}
+
+
+.text {
+  display: grid;
+  margin-top: 25px;
+  gap: var(--gap-main);
+}

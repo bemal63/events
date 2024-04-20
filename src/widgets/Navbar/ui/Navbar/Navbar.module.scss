@@ -1,6 +1,19 @@
 .navbar {
-  // display: grid;
-  // justify-content: space-between;
-  // align-items: center;
-  // text-align: center;
+  margin: var(--gap-xxl) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.event {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: var(--fs-lg);
+}
+
+a {
+  color: black;
 }
