@@ -32,9 +32,9 @@ app.post("/posts", checkAuth, postCreateValidation, PostController.create);
 app.delete("/posts/:id", checkAuth, PostController.remove);
 app.patch("/posts/:id", checkAuth, PostController.update);
 
-app.listen(5173, (err) => {
+app.listen(3000, (err) => {
   if (err) {
     console.log(err);
   }
-  console.log("Server started on port 5173");
+  console.log("Server started on port 3000");
 });
