@@ -1,4 +1,4 @@
-import PostModel from "../models/Post.js";
+import PostModel from "../models/post.js";
 
 export const getAll = async (req, res) => {
   try {
@@ -12,20 +12,13 @@ export const getAll = async (req, res) => {
 export const getOne = async (req, res) => {
   try {
     const postId = req.params.id;
-    PostModel.findOneById({ _id: postId }, (err, doc) => {
-      if (err) {
-        console.log(err);
-        return res.status(500).json({
-          message: "Не удалось получить статью",
-        });
-      }
-      if (!doc) {
-        return res.status(404).json({
-          message: "Не найдена статья",
-        });
-      }
-      res.json(doc);
-    });
+    const postOne = await PostModel.findById(postId);
+    if (!postOne) {
+      return res.status(500).json({
+        message: "Не удалось получить статью",
+      });
+    }
+    res.json(postOne);
   } catch (err) {
     return res.status(400).json({ message: "Не удалось получить статьи" });
   }
@@ -34,21 +27,13 @@ export const getOne = async (req, res) => {
 export const remove = async (req, res) => {
   try {
     const postId = req.params.id;
-    PostModel.findOneAndDelete({ _id: postId }, (err, doc) => {
-      if (err) {
-        return res.status(400).json({
-          message: "Не удалось удалить статью",
-        });
-      }
-      if (!doc) {
-        return res.status(404).json({
-          message: "Не найдена статья",
-        });
-      }
-      res.json({
-        message: "Статья удалена",
+    const deletePost = await PostModel.findOneAndDelete(postId);
+    if (!deletePost) {
+      return res.status(500).json({
+        message: "Не удалось удалить статью",
       });
-    });
+    }
+    res.json(deletePost);
   } catch (err) {
     console.log(err);
     res.status(500).json({

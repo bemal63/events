@@ -9,8 +9,8 @@ import {
 } from "./validations/auth.js";
 
 import checkAuth from "./utils/checkAuth.js";
-import * as UserController from "./controllers/UserController.js";
-import * as PostController from "./controllers/PostController.js";
+import * as UserController from "./controllers/userController.js";
+import * as PostController from "./controllers/postController.js";
 
 mongoose
   .connect(
