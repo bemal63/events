@@ -11,6 +11,7 @@ import {
 import checkAuth from "./utils/checkAuth.js";
 import * as UserController from "./controllers/userController.js";
 import * as PostController from "./controllers/postController.js";
+import validatorError from "./utils/validatorError.js";
 
 mongoose
   .connect(
@@ -22,15 +23,44 @@ mongoose
 const app = express();
 app.use(express.json());
 
-app.post("/auth/login", loginValidation, UserController.login);
-app.post("/auth/register", registerValidation, UserController.register);
+const storage = multer.diskStorage({
+  destination: (_, __, cb) => {
+    cb(null, "uploads");
+  },
+  filename: (_, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+app.use("/uploads", express.static("uploads"));
+
+app.post("/auth/login", loginValidation, validatorError, UserController.login);
+app.post(
+  "/auth/register",
+  registerValidation,
+  validatorError,
+  UserController.register
+);
 app.get("/auth/me", checkAuth, UserController.getMe);
+
+app.post("/upload", checkAuth, upload.single("image"), (req, res) => {
+  res.json({
+    url: `/uploads/${req.file.originalname}`,
+  });
+});
 
 app.get("/posts", PostController.getAll);
 app.get("/posts/:id", PostController.getOne);
-app.post("/posts", checkAuth, postCreateValidation, PostController.create);
+app.post(
+  "/posts",
+  checkAuth,
+  postCreateValidation,
+  validatorError,
+  PostController.create
+);
 app.delete("/posts/:id", checkAuth, PostController.remove);
-app.patch("/posts/:id", checkAuth, PostController.update);
+app.patch("/posts/:id", checkAuth, validatorError, PostController.update);
 
 app.listen(3000, (err) => {
   if (err) {
