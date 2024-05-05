@@ -1,0 +1,19 @@
+.form {
+  width: 426px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin: 50px auto;
+  border-radius: var(--radius-main) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.field {
+  margin-bottom: 20px !important;
+}
+
+.title {
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+}
