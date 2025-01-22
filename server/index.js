@@ -1,6 +1,8 @@
 import express from "express";
 import multer from "multer";
-import mongoose from "mongoose";
+import fs from "fs";
+
+// import mongoose from "mongoose";
 
 import {
   loginValidation,
@@ -13,12 +15,13 @@ import * as UserController from "./controllers/userController.js";
 import * as PostController from "./controllers/postController.js";
 import validatorError from "./utils/validatorError.js";
 
-mongoose
-  .connect(
-    "mongodb+srv://bimal163:J0kerJ0ker@cluster0.1pzuwto.mongodb.net/blog?retryWrites=true&w=majority"
-  )
-  .then(() => console.log("Connected to DB"))
-  .catch((err) => console.log("Error connecting to DB", err));
+// mongoose
+//   .connect(
+//     ""
+//   )
+//   .then(() => console.log("Connected to DB"))
+//   .catch((err) => console.log("Error connecting to DB", err));
+
 
 const app = express();
 app.use(express.json());
@@ -54,7 +57,7 @@ app.get("/posts", PostController.getAll);
 app.get("/posts/:id", PostController.getOne);
 app.post(
   "/posts",
-  checkAuth,
+  // checkAuth,
   postCreateValidation,
   validatorError,
   PostController.create
