@@ -5,6 +5,7 @@ import {PostPage} from "pages/PostPage/PostPage";
 import {CreatePostPage} from "pages/CreatePostPage/CreatePostPage.tsx";
 import { LoginPage } from "pages/LoginPage/LoginPage";
 import { RegisterPage } from "pages/RegisterPage/RegisterPage";
+import { NotFound } from "pages/NotFound/NotFound";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/posts/:id" element={<PostPage />} />
           <Route path="/create" element={<CreatePostPage />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

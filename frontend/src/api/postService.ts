@@ -1,6 +1,11 @@
+import { Post } from "features/post/types";
 import axios from "../axios"
 
-export const fetchPosts = async () => {
+interface FetchPostsResponse {
+  data: Post[];
+}
+
+export const fetchPosts = async (): Promise<FetchPostsResponse> => {
   const { data } = await axios.get('/posts');
-  return data;
+  return { data: data as Post[] };
 };
